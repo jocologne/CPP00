@@ -1,7 +1,23 @@
 
-#include <unistd.h>
+#include "Phonebook.hpp"
+#include <iostream>
+#include <string>
 
 int main(void)
 {
-	write(1, "abcde", 5);
+	PhoneBook phonebook;
+	std::string command;
+	while (true)
+	{
+		std::cout << "Enter a command (ADD, SERCH, EXIT): ";
+		std::getline(std::cin, command);
+		if(command == "ADD")
+			phonebook.addContact();
+		else if (command == "SEARCH")
+			phonebook.searchContact();
+		else if (command == "EXIT")
+			break;
+		else
+			std::cout << "Unknown command."  << std::endl;
+	}
 }

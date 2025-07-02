@@ -2,15 +2,24 @@
 #ifndef PHONEBOOK_H
 # define PHONEBOOK_H
 
-# include "contact.hpp"
+# include "Contact.hpp"
+# include <iostream>
+# include <cstdlib>
+# include <iomanip>
+# include <string>
 
 class PhoneBook
 {
-private:
+	private:
+		Contact contacts[8];
+		int	count;
+		int	index;
 
-
-public:
-	PhoneBook();
+	public:
+		PhoneBook();
+		void addContact();
+		void searchContact();
+		void printContact(int index);
 };
 
 #endif

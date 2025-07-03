@@ -27,11 +27,6 @@ static std::string trunc(const std::string &str)
 	return str;
 }
 
-/*void PhoneBook::printContact(int index)
-{
-	Contact &c = contacts[index];
-}*/
-
 void PhoneBook::addContact()
 {
 	Contact c;
@@ -54,10 +49,10 @@ void PhoneBook::searchContact()
 		std::cout << "Phonebook is empty." << std::endl;
 		return;
 	}
-	std::cout << std::setw(10) << "Index" << "|"
+	std::cout << GREEN <<std::setw(10) << "Index" << "|"
    << std::setw(10) << "Name" << "|"
    << std::setw(10) << "Last" << "|"
-   << std::setw(10) << "Nickname" << "\n";
+   << std::setw(10) << "Nickname" << RESET <<std::endl;
    for (int i = 0; i < count; i++)
 	{
    	std::cout << std::setw(10) << i + 1 << "|"
